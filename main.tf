@@ -35,7 +35,7 @@ resource "helm_release" "argocd" {
     kubernetes_namespace_v1.example
   ]
 
-  timeout          = 1200    # Increase to 20 minutes
+  timeout          = 3600    # Increase to 1 hour
   wait             = true   # Wait for all pods to be "Ready" before finishing
   cleanup_on_fail  = true   # Automatically delete failed attempts
   atomic           = true   # Roll back if it fails again
